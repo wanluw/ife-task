@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>task2</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="inner">
+                <h1>百度前端技术学院 task2 </h1>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="hobbyCheck">
+                <h2>爱好选择</h2>
+                <div class="hobbyCheck-intro intro">
+                    <h3>功能描述</h3>
+                    <p>输入框中可以用来输入用户的兴趣爱好，允许用换行、空格（全角/半角）、逗号（全角/半角）、顿号、分号来作为不同爱好的分隔。</p>
+                    <p>爱好数量不能超过10个，也不能为空。当发生异常时，在按钮上方显示一段红色的错误提示文字，并且不继续执行后面的行为；当输入正确时，提示文字消失。</p>
+                    <p>当点击按钮时，兴趣爱好，按照分隔符分开后，过滤掉空的、重复的爱好，每一个爱好输出成为一个复选框，爱好内容作为复选框的内容。</p>
+                </div>
+                <div  class="hobbyCheck-content content">
+                    <textarea class="hobby"></textarea>
+                    <p class="warning"></p>
+                    <p><button class="hobby-submit">确定</button></p>
+                    <div class="tags"></div>
+                </div>
+            </div>
+            <div class="timer">
+                <h2>倒计时</h2>
+                <div class="timer-intro intro">
+                    <h3>功能描述</h3>
+                    <p>输入框允许按照特定的格式YYYY-MM-DD输入年月日；</p>
+                    <p>输入框旁有一个按钮，点击按钮后，如果输入时间是未来的时间，页面中显示，距离YYYY年MM月DD日还有XX天XX小时XX分XX秒；如果是以前的时间，显示距离YYYY年MM月DD日过了XX天XX小时XX分XX秒</p>
+                    <p>每一秒钟更新倒计时上显示的数如果时差为0，则倒计时停止</p>
+                </div>
+                <div class="timer-content content">
+                    <input type="text" class="date">
+                    <button class="timer-submit">时间差</button>
+                    <span class='date-tips'></span>
+                    <p>
+                        <span class="text"></span>
+                        <span class="countdown"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="slider">
+                <h2>轮播图</h2>
+                <div class="slider-intro intro">
+                    <h3>功能描述</h3>
+                    <p>图片正序/逆序（可配置）循环轮播。</p>
+                    <p>点击小点，轮播图自动动画切换到对应的图片,图片切换的动画流畅。移除轮播图区域，图片继续轮播。</p>
+                </div>
+                <div class="slider-content content">
+                    <ul class="slider-bd">
+                        <li class="slider-item">
+                            <img src="img/pic.jpg">
+                        </li>
+                        <li class="slider-item">
+                            <img src="img/pic1.jpg">
+                        </li>
+                        <li class="slider-item">
+                            <img src="img/pic2.jpg">
+                        </li>
+                        <li class="slider-item">
+                            <img src="img/pic3.jpg">
+                        </li>
+                        <li class="slider-item">
+                            <img src="img/pic4.jpg">
+                        </li>
+                    </ul>
+                    <div class="slider-ft">
+                        <a href="#" class="slider-ft-item current-slider" data-index="0"></a>
+                        <a href="#" class="slider-ft-item" data-index="1"></a>
+                        <a href="#" class="slider-ft-item" data-index="2"></a>
+                        <a href="#" class="slider-ft-item" data-index="3"></a>
+                        <a href="#" class="slider-ft-item" data-index="4"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <h2>搜索</h2>
+                <div class="search-intro intro">
+                    <h3>功能描述</h3>
+                    <p>搜索框有输入后，下方展现百度搜索提示数据（利用 jsonp 获取）</p>
+                    <p>允许使用鼠标点击选中提示栏中的某个选项,点击后，打开百度搜索结果页面；允许使用键盘上下键来选中提示栏中的某个选项，提示内容变更到输入框中，回车确认选中后，打开新的搜索内容页面。</p>
+                </div>
+                <div class="search-content content">
+                    <input type="text" class="target">
+                    <ul class="sug">
+                    </ul>
+                </div>
+            </div>
+            <div class="move">
+                <h2>拖放</h2>
+                <div class="move-intro intro">
+                    <h3>功能描述</h3>
+                    <p>一个拖拽交互的界面，左右两侧各有一个容器，里面的选项可以通过拖拽来左右移动</p>
+                    <p>被选择拖拽的选项在拖拽过程后，在原容器中消失，跟随鼠标移动,如果鼠标光标在另一个容器里，拖拽释放后，选项添加到另一个容器；如果鼠标光标不在另一个容器里，拖拽释放后，选项返回原容器。</p>
+                </div>
+                <div class="move-content">
+                    <div class="main">
+                        <div class="main-left">
+                            <ul class="list list-left" data-type="left">
+                                <li class="list-item"></li>
+                                <li class="list-item"></li>
+                                <li class="list-item"></li>
+                                <li class="list-item"></li>
+                                <li class="list-item"></li>
+                                <li class="list-item"></li>
+                            </ul>
+                        </div>
+                        <div class="main-right">
+                            <ul class="list list-right" data-type="right">
+                                <li class="list-item"></li>
+                                <li class="list-item"></li>
+                                <li class="list-item"></li>
+                                <li class="list-item"></li>
+                                <li class="list-item"></li>
+                                <li class="list-item"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/util.js"></script>
+    <script src="js/task0002_1.js"></script>
+    <script src="js/task0002_2.js"></script>
+    <script src="js/task0002_3.js"></script>
+    <script src="js/task0002_4.js"></script>
+    <script src="js/task0002_5.js"></script>
+</body>
+</html>
